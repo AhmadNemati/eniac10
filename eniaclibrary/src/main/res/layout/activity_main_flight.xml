@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textColor">
+
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_container">
+
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/colorPrimary_"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llDestination"
+
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="مقصد"
+                    android:textAppearance="@style/IranSansBold"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvDestination"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="شهر مقصد را انتخاب نمایید"
+                    android:textColor="@color/textColor"
+
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="100"
+                android:rotation="180">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lottie_autoPlay="false"
+                    app:lottie_fileName="lottie/plane.json"
+                    app:lottie_loop="true"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dot_icon"
+                        android:textAppearance="@style/IconFonts"
+                        android:textColor="@color/currentColor"
+                        android:textSize="18dp"
+
+                        />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="100"
+                        android:background="@color/currentColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/dot_icon"
+                        android:textAppearance="@style/IconFonts"
+                        android:textColor="@color/currentColor"
+                        android:textSize="18dp"
+
+                        />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llOrigin"
+
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="مبداء"
+                    android:textAppearance="@style/IranSansBold"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvOrigin"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="شهر مبداء را انتخاب نمایید"
+                    android:textColor="@color/textColor"
+
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="80"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+
+                        android:id="@+id/llBackDate"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="100"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="تاریخ برگشت"
+                            android:textAppearance="@style/IranSansBold"
+                            android:textColor="@color/textColor3"
+                            android:textSize="16dp"
+
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tvBackDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="تاریخ برگشت را انتخاب\n نمایید"
+                            android:textColor="@color/textColor"
+
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/calendar_icon"
+                        android:textAppearance="@style/IconFonts"
+                        android:textColor="@color/colorPrimary_"
+                        android:textSize="25dp"
+
+
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/llGoDate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="100"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="تاریخ رفت"
+                            android:textAppearance="@style/IranSansBold"
+                            android:textColor="@color/textColor3"
+                            android:textSize="16dp"
+
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tvGoDateDate"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="تاریخ رفت را انتخاب\n نمایید"
+                            android:textColor="@color/textColor"
+
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="100"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <android.support.v7.widget.RecyclerView
+
+                            android:id="@+id/rvAdult"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="100" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center|right"
+                            android:text="بزرگسال"
+                            android:textColor="@color/textColor3"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <android.support.v7.widget.RecyclerView
+
+                            android:id="@+id/rvChild"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="100" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center|right"
+                            android:text="کودک"
+                            android:textColor="@color/textColor3"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <android.support.v7.widget.RecyclerView
+
+                            android:id="@+id/rvInfant"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="100" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center|right"
+                            android:text="نوزاد"
+                            android:textColor="@color/textColor3"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/llPassenger"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:foreground="?attr/selectableItemBackground"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text="تعداد مسافران"
+                                android:textAppearance="@style/IranSansBold"
+                                android:textColor="@color/textColor3"
+                                android:textSize="16dp" />
+
+                            <TextView
+
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/background40"
+                                android:gravity="center"
+                                android:text="@string/user_add_icon"
+                                android:textAppearance="@style/IconFonts"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="100"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/background42"
+                                    android:orientation="horizontal"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/tvInfant"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textAppearance="@style/IranSansBold"
+                                        android:textColor="@color/textColor3"
+                                        android:textSize="16dp" />
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="10dp"
+                                        android:src="@drawable/baby"
+                                        android:tint="@color/buttonColor" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/background42"
+                                    android:orientation="horizontal"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/tvChild"
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textAppearance="@style/IranSansBold"
+                                        android:textColor="@color/textColor3"
+                                        android:textSize="16dp" />
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="10dp"
+                                        android:src="@drawable/child"
+                                        android:tint="@color/buttonColor" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/background42"
+                                    android:orientation="horizontal"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/tvAdult"
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textAppearance="@style/IranSansBold"
+                                        android:textColor="@color/textColor3"
+                                        android:textSize="16dp" />
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="10dp"
+                                        android:src="@drawable/adult"
+                                        android:tint="@color/buttonColor" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/toolbar_container"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shadow_b"
+                        android:backgroundTint="@color/buttonColor" />
+
+                    <LinearLayout
+                        android:id="@+id/llClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|right"
+                        android:orientation="horizontal"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/tvClass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:text="اکونومی"
+                            android:textAppearance="@style/IranSansBold"
+                            android:textColor="@color/textColor3"
+                            android:textSize="16dp" />
+
+                        <TextView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/background40"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:text="@string/plane_icon"
+                            android:textAppearance="@style/IconFonts"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+
+                            />
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center|right"
+                      android:orientation="horizontal"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        >
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginRight="10dp"
+                          android:gravity="center"
+                          android:text="پرواز مستقیم"
+                          android:textColor="@color/textColor3"
+                          android:textSize="14dp" />
+                      <CheckBox
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:buttonTint="@color/buttonColor"/>
+
+
+
+
+                  </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <include
+                android:id="@+id/btnConfirm"
+                layout="@layout/circular_progress_button" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMulti"
+
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background40"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="چند مسیره"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/tvOneWay"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background40"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="یک طرفه"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/tvRoundTrip"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background41"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="رفت و برگشت"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="رفت و برگشت"
+            android:textAppearance="@style/IranSansBold"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+
+
+            />
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/loading"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_container"
+        android:background="@drawable/shadow_b" />
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary_"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="100"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tvTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:50"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textAppearance="@style/IranSansBold"/>
+
+            <TextView
+                android:id="@+id/tvAirport2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:50"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:rotation="180">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dot_icon"
+                    android:textAppearance="@style/IconFonts"
+                    android:textColor="@color/currentColor"
+                    android:textSize="12dp"
+
+                    />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="100"
+                    android:background="@color/currentColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dot_icon"
+                    android:textAppearance="@style/IconFonts"
+                    android:textColor="@color/currentColor"
+                    android:textSize="12dp"
+
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plane_icon"
+                android:textAppearance="@style/IconFonts"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:rotation="90"
+                android:layout_centerInParent="true"
+
+
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:50"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textAppearance="@style/IranSansBold"/>
+
+            <TextView
+                android:id="@+id/tvAirport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:50"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            app:civ_border_color="@color/currentColor"
+            app:civ_fill_color="@color/white"
+            app:civ_border_width="1dp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

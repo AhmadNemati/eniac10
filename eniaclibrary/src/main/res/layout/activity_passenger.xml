@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".flight.activity.passenger.PassengerActivity"
+    android:background="#f4f4f4">
+
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar_container"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:background="#f4f4f4"
+
+            >
+
+            <!--        <com.lsjwzh.widget.recyclerviewpager.RecyclerViewPager
+                        android:id="@+id/rvListCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_161dp_r"
+                        android:clipToPadding="false"
+                        android:paddingLeft="@dimen/_30dp"
+                        android:paddingRight="@dimen/_30dp"
+                        app:rvp_singlePageFling="true"
+                        app:rvp_triggerOffset="0.1"
+                        android:visibility="gone"
+
+
+                        />-->
+
+
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/_30dp"
+                android:paddingRight="@dimen/_30dp"
+
+
+
+
+
+
+                />
+
+
+
+            <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:spi_dotSelectedColor="@color/currentColor"
+                app:spi_dotSelectedSize="@dimen/_8sdp"
+                app:spi_dotSize="@dimen/_4sdp"
+                app:spi_dotSpacing="@dimen/_5sdp"
+
+                />
+
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btnConfirm"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10dp"
+            android:background="@color/buttonColor"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textAppearance="@style/IranSansBold"
+            android:text="تائید"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_container"
+        android:background="@drawable/shadow_b" />
+    <include layout="@layout/loading"/>
+
+</RelativeLayout>

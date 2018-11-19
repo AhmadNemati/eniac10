@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="library.android.eniac">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application>
+        <activity
+            android:name=".flight.activity.main.MainFlight"
+            android:theme="@style/AppThemes"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".flight.activity.search.SearchFlightActivity"
+            android:theme="@style/AppThemes"
+            android:screenOrientation="portrait"/>
+
+
+
+
+        <activity android:name=".flight.activity.passenger.PassengerActivity"
+            android:theme="@style/AppThemes"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            />
+    </application>
+
+</manifest>

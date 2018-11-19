@@ -1,0 +1,55 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@color/colorPrimary_"
+
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/back_toolbar"
+        android:scaleType="fitXY"
+
+        />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="بلیط هواپیما"
+        android:textColor="@color/currentColor"
+        android:textSize="@dimen/textSize_20dp"
+        android:layout_centerInParent="true"/>
+    <FrameLayout
+        android:id="@+id/flLogoToolbar"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="match_parent"
+        android:foreground="?attr/selectableItemBackground"
+        >
+        <ImageView
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvMenu"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/back_icon"
+        android:textAppearance="@style/IconFonts"
+        android:textColor="@color/currentColor"
+        android:textSize="@dimen/iconSize_24dp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_alignParentEnd="true"
+        android:foreground="?attr/selectableItemBackground"/>
+</RelativeLayout>
