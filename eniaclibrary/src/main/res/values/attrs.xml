@@ -2,4 +2,103 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <attr name="textFieldStyle" format="reference" />
     <attr name="fontPathCalligraphyConfig" format="string" />
+        <attr name="fontPath" format="string"/>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CardView">
+        <!-- Background color for CardView. -->
+        <attr name="cardBackgroundColor" format="color" />
+        <!-- Corner radius for CardView. -->
+        <attr name="cardCornerRadius" format="dimension" />
+        <!-- Elevation for CardView. -->
+        <attr name="cardElevation" format="dimension" />
+        <!-- Maximum Elevation for CardView. -->
+        <attr name="cardMaxElevation" format="dimension" />
+        <!-- Add padding in API v21+ as well to have the same measurements with previous versions. -->
+        <attr name="cardUseCompatPadding" format="boolean" />
+        <!-- Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. -->
+        <attr name="cardPreventCornerOverlap" format="boolean" />
+        <!-- Inner padding between the edges of the Card and children of the CardView. -->
+        <attr name="contentPadding" format="dimension" />
+        <!-- Inner padding between the left edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingLeft" format="dimension" />
+        <!-- Inner padding between the right edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingRight" format="dimension" />
+        <!-- Inner padding between the top edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingTop" format="dimension" />
+        <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingBottom" format="dimension" />
+        <!-- Workaround to read user defined minimum width -->
+        <attr name="android:minWidth"/>
+        <!-- Workaround to read user defined minimum height -->
+        <attr name="android:minHeight"/>
+    </declare-styleable>
+
+    <declare-styleable name="LottieAnimationView">
+        <attr name="lottie_fileName" format="string" />
+        <attr name="lottie_rawRes" format="reference" />
+        <attr name="lottie_url" format="string" />
+        <attr name="lottie_autoPlay" format="boolean" />
+        <attr name="lottie_loop" format="boolean" />
+        <attr name="lottie_repeatMode" format="enum">
+            <enum name="restart" value="1" />
+            <enum name="reverse" value="2" />
+        </attr>
+        <attr name="lottie_repeatCount" format="integer" />
+        <attr name="lottie_imageAssetsFolder" format="string" />
+        <attr name="lottie_progress" format="float" />
+        <attr name="lottie_enableMergePathsForKitKatAndAbove" format="boolean" />
+        <attr name="lottie_colorFilter" format="color" />
+        <attr name="lottie_scale" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressButton">
+        <attr name="spinning_bar_width" format="dimension"/>
+        <attr name="spinning_bar_color" format="color"/>
+        <attr name="spinning_bar_padding" format="dimension"/>
+        <attr name="initialCornerAngle" format="dimension"/>
+        <attr name="finalCornerAngle" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerView">
+        <!-- Class name of the Layout Manager to be used.
+        <p/>
+        The class must extend android.support.v7.widget.RecyclerView$LayoutManager
+        and have either a default constructor or constructor with the signature
+        (android.content.Context, android.util.AttributeSet, int, int).
+         <p/>
+         If the name starts with a '.', application package is prefixed.
+         Else, if the name contains a '.', the classname is assumed to be a full class name.
+         Else, the recycler view package name (android.support.v7.widget) is prefixed. -->
+        <attr name="layoutManager" format="string" />
+        <!-- ============================= -->
+        <!-- Attributes for Layout Manager -->
+        <!-- ============================= -->
+        <eat-comment />
+        <attr name="android:orientation" />
+        <attr name="android:descendantFocusability" />
+        <attr name="spanCount" format="integer"/>
+        <attr name="reverseLayout" format="boolean" />
+        <attr name="stackFromEnd" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ScrollingPagerIndicator">
+        <attr name="spi_dotColor" format="color" />
+        <attr name="spi_dotSelectedColor" format="color" />
+        <attr name="spi_dotSize" format="dimension" />
+        <attr name="spi_dotSelectedSize" format="dimension" />
+        <attr name="spi_dotSpacing" format="dimension" />
+        <attr name="spi_visibleDotCount" format="integer" />
+        <attr name="spi_visibleDotThreshold" format="integer" />
+        <attr name="spi_looped" format="boolean" />
+    </declare-styleable>
 </resources>
